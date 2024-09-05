@@ -32,12 +32,12 @@ func (c *categoryService) Store(category *model.Category) error {
 
 func (c *categoryService) Update(id int, category model.Category) error {
 	c.categoryRepository.Update(id, category)
-	return nil // TODO: replace this
+	return nil
 }
 
 func (c *categoryService) Delete(id int) error {
 	c.categoryRepository.Delete(id)
-	return nil // TODO: replace this
+	return nil
 }
 
 func (c *categoryService) GetByID(id int) (*model.Category, error) {
@@ -54,5 +54,5 @@ func (c *categoryService) GetList() ([]model.Category, error) {
 	if err != nil {
 		return nil, err
 	}
-	return getlist, nil // TODO: replace this
+	return getlist, nil
 }

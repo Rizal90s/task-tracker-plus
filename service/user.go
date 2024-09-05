@@ -93,5 +93,5 @@ func (s *userService) GetUserTaskCategory() ([]model.UserTaskCategory, error) {
 	if err != nil {
 		return nil, err
 	}
-	return getCategories, nil // TODO: replace this
+	return getCategories, nil
 }

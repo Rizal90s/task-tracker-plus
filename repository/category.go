@@ -28,13 +28,13 @@ func (c *categoryRepository) Store(Category *model.Category) error {
 
 func (c *categoryRepository) Update(id int, category model.Category) error {
 	c.filebasedDb.UpdateCategory(id, category)
-	return nil // TODO: replace this
+	return nil
 }
 
 func (c *categoryRepository) Delete(id int) error {
 	c.filebasedDb.DeleteCategory(id)
 
-	return nil // TODO: replace this
+	return nil
 }
 
 func (c *categoryRepository) GetByID(id int) (*model.Category, error) {
@@ -48,5 +48,5 @@ func (c *categoryRepository) GetList() ([]model.Category, error) {
 	if err != nil {
 		return nil, err
 	}
-	return getlist, nil // TODO: replace this
+	return getlist, nil
 }

@@ -33,12 +33,12 @@ func (c *taskService) Store(task *model.Task) error {
 
 func (s *taskService) Update(id int, task *model.Task) error {
 	s.taskRepository.Update(id, task)
-	return nil // TODO: replace this
+	return nil
 }
 
 func (s *taskService) Delete(id int) error {
 	s.taskRepository.Delete(id)
-	return nil // TODO: replace this
+	return nil
 }
 
 func (s *taskService) GetByID(id int) (*model.Task, error) {
@@ -55,7 +55,7 @@ func (s *taskService) GetList() ([]model.Task, error) {
 	if err != nil {
 		return nil, err
 	}
-	return getList, nil // TODO: replace this
+	return getList, nil
 }
 
 func (s *taskService) GetTaskCategory(id int) ([]model.TaskCategory, error) {
@@ -63,5 +63,5 @@ func (s *taskService) GetTaskCategory(id int) ([]model.TaskCategory, error) {
 	if err != nil {
 		return nil, err
 	}
-	return taskCategories, nil // TODO: replace this
+	return taskCategories, nil
 }

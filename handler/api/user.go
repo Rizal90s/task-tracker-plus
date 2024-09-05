@@ -71,7 +71,7 @@ func (u *userAPI) Login(c *gin.Context) {
 		return
 	}
 	c.SetCookie("session_token", *token, 3600, "/", "", false, true)
-	c.JSON(http.StatusOK, model.NewSuccessResponse("login success")) // TODO: answer here
+	c.JSON(http.StatusOK, model.NewSuccessResponse("login success"))
 }
 
 func (u *userAPI) GetUserTaskCategory(c *gin.Context) {
@@ -80,5 +80,5 @@ func (u *userAPI) GetUserTaskCategory(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, model.NewErrorResponse("error internal server"))
 		return
 	}
-	c.JSON(http.StatusOK, uTask) // TODO: answer here
+	c.JSON(http.StatusOK, uTask)
 }

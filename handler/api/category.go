@@ -70,7 +70,7 @@ func (ct *categoryAPI) UpdateCategory(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, model.SuccessResponse{Message: "category update success"}) // TODO: answer here
+	c.JSON(http.StatusOK, model.SuccessResponse{Message: "category update success"})
 }
 
 func (ct *categoryAPI) DeleteCategory(c *gin.Context) {
@@ -86,7 +86,7 @@ func (ct *categoryAPI) DeleteCategory(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, model.SuccessResponse{Message: "category delete success"}) // TODO: answer here
+	c.JSON(http.StatusOK, model.SuccessResponse{Message: "category delete success"})
 }
 
 func (ct *categoryAPI) GetCategoryByID(c *gin.Context) {
@@ -111,5 +111,5 @@ func (ct *categoryAPI) GetCategoryList(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, cat) // TODO: answer here
+	c.JSON(http.StatusOK, cat)
 }

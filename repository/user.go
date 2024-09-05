@@ -24,7 +24,7 @@ func (r *userRepository) GetUserByEmail(email string) (model.User, error) {
 	if err != nil {
 		return model.User{}, err
 	}
-	return getUserMail, nil // TODO: replace this
+	return getUserMail, nil
 }
 
 func (r *userRepository) CreateUser(user model.User) (model.User, error) {
@@ -42,5 +42,5 @@ func (r *userRepository) GetUserTaskCategory() ([]model.UserTaskCategory, error)
 	if err != nil {
 		return []model.UserTaskCategory{}, err
 	}
-	return getUser, nil // TODO: replace this
+	return getUser, nil
 }

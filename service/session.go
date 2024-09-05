@@ -22,5 +22,5 @@ func (c *sessionService) GetSessionByEmail(email string) (model.Session, error) 
 	if err != nil {
 		return model.Session{}, err
 	}
-	return sessionByMail, nil // TODO: replace this
+	return sessionByMail, nil
 }

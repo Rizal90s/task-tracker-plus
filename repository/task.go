@@ -36,7 +36,7 @@ func (t *taskRepository) Update(taskID int, task *model.Task) error {
 		return err
 	}
 
-	return nil // TODO: replace this
+	return nil
 }
 
 func (t *taskRepository) Delete(id int) error {
@@ -45,7 +45,7 @@ func (t *taskRepository) Delete(id int) error {
 		return err
 	}
 
-	return nil // TODO: replace this
+	return nil
 }
 
 func (t *taskRepository) GetByID(id int) (*model.Task, error) {
@@ -53,7 +53,7 @@ func (t *taskRepository) GetByID(id int) (*model.Task, error) {
 	if err != nil {
 		return nil, err
 	}
-	return getid, nil // TODO: replace this
+	return getid, nil
 }
 
 func (t *taskRepository) GetList() ([]model.Task, error) {
@@ -61,7 +61,7 @@ func (t *taskRepository) GetList() ([]model.Task, error) {
 	if err != nil {
 		return nil, err
 	}
-	return tasks, nil // TODO: replace this
+	return tasks, nil
 }
 
 func (t *taskRepository) GetTaskCategory(id int) ([]model.TaskCategory, error) {
@@ -69,5 +69,5 @@ func (t *taskRepository) GetTaskCategory(id int) ([]model.TaskCategory, error) {
 	if err != nil {
 		return nil, err
 	}
-	return taskCategories, nil // TODO: replace this
+	return taskCategories, nil
 }

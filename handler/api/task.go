@@ -62,7 +62,7 @@ func (t *taskAPI) UpdateTask(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, model.SuccessResponse{Message: "update task success"}) // TODO: answer here
+	c.JSON(http.StatusOK, model.SuccessResponse{Message: "update task success"})
 }
 
 func (t *taskAPI) DeleteTask(c *gin.Context) {
@@ -76,7 +76,7 @@ func (t *taskAPI) DeleteTask(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, model.ErrorResponse{Error: err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, model.SuccessResponse{Message: "delete task success"}) // TODO: answer here
+	c.JSON(http.StatusOK, model.SuccessResponse{Message: "delete task success"})
 }
 
 func (t *taskAPI) GetTaskByID(c *gin.Context) {
@@ -101,7 +101,7 @@ func (t *taskAPI) GetTaskList(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, model.ErrorResponse{Error: err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, tasklist) // TODO: answer here
+	c.JSON(http.StatusOK, tasklist)
 }
 
 func (t *taskAPI) GetTaskListByCategory(c *gin.Context) {
@@ -115,5 +115,5 @@ func (t *taskAPI) GetTaskListByCategory(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, model.ErrorResponse{Error: err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, tasklist) // TODO: answer here
+	c.JSON(http.StatusOK, tasklist)
 }

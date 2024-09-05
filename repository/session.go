@@ -24,15 +24,15 @@ func NewSessionsRepo(filebasedDb *filebased.Data) *sessionsRepo {
 }
 
 func (u *sessionsRepo) AddSessions(session model.Session) error {
-	return u.filebasedDb.AddSession(session) // TODO: replace this
+	return u.filebasedDb.AddSession(session)
 }
 
 func (u *sessionsRepo) DeleteSession(token string) error {
-	return u.filebasedDb.DeleteSession(token) // TODO: replace this
+	return u.filebasedDb.DeleteSession(token)
 }
 
 func (u *sessionsRepo) UpdateSessions(session model.Session) error {
-	return u.filebasedDb.UpdateSession(session) // TODO: replace this
+	return u.filebasedDb.UpdateSession(session)
 }
 
 func (u *sessionsRepo) SessionAvailEmail(email string) (model.Session, error) {
@@ -41,7 +41,7 @@ func (u *sessionsRepo) SessionAvailEmail(email string) (model.Session, error) {
 		return model.Session{}, err
 	}
 
-	return sessionEmail, nil // TODO: replace this
+	return sessionEmail, nil
 }
 
 func (u *sessionsRepo) SessionAvailToken(token string) (model.Session, error) {
@@ -49,7 +49,7 @@ func (u *sessionsRepo) SessionAvailToken(token string) (model.Session, error) {
 	if err != nil {
 		return model.Session{}, err
 	}
-	return sessionAvailToken, nil // TODO: replace this
+	return sessionAvailToken, nil
 }
 
 func (u *sessionsRepo) TokenValidity(token string) (model.Session, error) {
